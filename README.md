@@ -35,4 +35,5 @@ SubscribeToEvent(E_ENDRENDERING, HANDLER(HelloWorld, HandlePostRender));
 ````
   
 and call rocket's render method in HandlePostRender.
-	
+
+If you want to run the RocketTest.cpp example you need to merge the Data/* directory with the Bin/Data directory that comes with Urho3D.
