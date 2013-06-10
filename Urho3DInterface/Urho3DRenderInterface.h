@@ -42,6 +42,13 @@ public:
 	virtual bool GenerateTexture(Rocket::Core::TextureHandle& texture_handle, const Rocket::Core::byte* source, const Rocket::Core::Vector2i& source_dimensions);
 	/// Called by Rocket when a loaded texture is no longer required.
 	virtual void ReleaseTexture(Rocket::Core::TextureHandle texture_handle);
+    
+    /// Returns the native horizontal texel offset for the renderer.
+	/// @return The renderer's horizontal texel offset. The default implementation returns 0.
+	virtual float GetHorizontalTexelOffset();
+	/// Returns the native vertical texel offset for the renderer.
+	/// @return The renderer's vertical texel offset. The default implementation returns 0.
+	virtual float GetVerticalTexelOffset();
 
 private:
     std::vector<Texture2D*> textures;

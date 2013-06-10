@@ -220,3 +220,21 @@ void Urho3DRenderInterface::ReleaseTexture(Rocket::Core::TextureHandle texture_h
 	delete tex;
 	tex = NULL;
 }
+
+float Urho3DRenderInterface::GetHorizontalTexelOffset()
+{
+#ifdef USE_OPENGL
+    return 0.f;
+#else
+    return 0.5f;
+#endif
+}
+
+float Urho3DRenderInterface::GetVerticalTexelOffset()
+{
+#ifdef USE_OPENGL
+    return 0.f;
+#else
+    return 0.5f;
+#endif
+}
